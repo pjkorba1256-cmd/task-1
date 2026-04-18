@@ -13,10 +13,7 @@ function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <div
       className="h-screen overflow-hidden bg-[#F5F7FA] flex flex-col md:flex-row font-sans text-[#2D3748] relative"
     >
       {/* MOBILE OVERLAY */}
@@ -275,7 +272,7 @@ function LandingPage() {
           </div>
         </section>
       </main>
-    </motion.div>
+    </div>
   );
 }
 

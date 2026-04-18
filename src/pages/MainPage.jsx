@@ -28,10 +28,7 @@ function MainPage() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <div
       className="min-h-screen bg-[#1a1625] flex items-center justify-center p-4 md:p-10"
     >
       <div className="w-full max-w-[1100px] min-h-[650px] bg-[#1f1b2e] rounded-3xl flex overflow-hidden shadow-2xl">
@@ -170,7 +167,7 @@ function MainPage() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
