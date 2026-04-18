@@ -6,37 +6,38 @@ import { useState } from "react";
 /* ---- Animated Mascot ---- */
 function Mascot() {
   return (
-    <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 flex items-center justify-center select-none">
+    {/* Mobile: w-24 h-24 small corner mascot. Desktop md+: w-80 h-80 full size */}
+    <div className="relative w-24 h-24 md:w-80 md:h-80 flex items-center justify-center select-none">
       {/* Back-left teal square */}
       <div
-        className="absolute w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-3xl"
+        className="absolute w-14 h-14 md:w-48 md:h-48 rounded-2xl md:rounded-3xl"
         style={{
           background: "linear-gradient(135deg, #2ECBBB 0%, #1AA99A 100%)",
-          transform: "rotate(-20deg) translate(-22px, 16px)",
+          transform: "rotate(-20deg) translate(-10px, 8px)",
           zIndex: 1,
         }}
       />
       {/* Back-right coral square */}
       <div
-        className="absolute w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-3xl"
+        className="absolute w-10 h-10 md:w-32 md:h-32 rounded-2xl md:rounded-3xl"
         style={{
           background: "linear-gradient(135deg, #F2705A 0%, #E85840 100%)",
-          transform: "rotate(22deg) translate(40px, 34px)",
+          transform: "rotate(22deg) translate(18px, 16px)",
           zIndex: 1,
         }}
       />
-      {/* Front yellow square (face) — static, no motion */}
+      {/* Front yellow square (face) */}
       <div
-        className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl z-10 flex flex-col items-center justify-center"
+        className="relative w-16 h-16 md:w-52 md:h-52 rounded-[1rem] md:rounded-[2.5rem] shadow-2xl z-10 flex flex-col items-center justify-center"
         style={{
           background: "linear-gradient(145deg, #FFE066 0%, #FFD020 100%)",
-          boxShadow: "0 20px 60px rgba(255, 208, 32, 0.3)",
+          boxShadow: "0 8px 30px rgba(255, 208, 32, 0.35)",
         }}
       >
-        {/* Eyes — static */}
-        <div className="flex gap-4 md:gap-6 mb-3 md:mb-4">
-          <div className="w-2.5 h-4 md:w-3 md:h-5 bg-[#1a1a3e] rounded-full" />
-          <div className="w-2.5 h-4 md:w-3 md:h-5 bg-[#1a1a3e] rounded-full" />
+        {/* Eyes */}
+        <div className="flex gap-1.5 md:gap-6 mb-1.5 md:mb-4">
+          <div className="w-1.5 h-2.5 md:w-3 md:h-5 bg-[#1a1a3e] rounded-full" />
+          <div className="w-1.5 h-2.5 md:w-3 md:h-5 bg-[#1a1a3e] rounded-full" />
         </div>
       </div>
     </div>
@@ -207,9 +208,9 @@ export default function LastPage() {
 
       {/* ---- HERO ---- */}
       <section className="relative overflow-hidden px-6 md:px-16 pt-10 pb-16 md:pb-40">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          {/* Left: Text */}
-          <div className="flex-1 z-10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-0 md:gap-12">
+          {/* Left: Text — on mobile add right padding so text doesn't overlap the corner mascot */}
+          <div className="flex-1 z-10 pr-28 md:pr-0">
             <motion.h1
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -259,12 +260,14 @@ export default function LastPage() {
             </motion.div>
           </div>
 
-          {/* Right: Mascot */}
+          {/* Right: Mascot
+               Mobile  → absolute, top-right corner, small
+               Desktop → in-flow flex item, full size */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, type: "spring", damping: 14 }}
-            className="flex-shrink-0 z-10 flex justify-center w-full md:w-auto"
+            className="absolute top-4 right-4 z-20 md:relative md:top-auto md:right-auto md:flex-shrink-0 md:z-10"
           >
             <Mascot />
           </motion.div>
