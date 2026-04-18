@@ -7,8 +7,32 @@ import bg3 from "../assets/bg-desert.jpg";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useGoogleLogin } from "@react-oauth/google";
+
 
 function MainPage() {
+  const login = useGoogleLogin({
+  onSuccess: async (tokenResponse) => {
+    console.log("Token:", tokenResponse);
+
+    // Fetch user info from Google
+    const userInfo = await fetch(
+      "https://www.googleapis.com/oauth2/v1/userinfo?alt=json",
+      {
+        headers: {
+          Authorization: `Bearer ${tokenResponse.access_token}`,
+        },
+      }
+    );
+
+    const user = await userInfo.json();
+    console.log("User:", user);
+  },
+
+  onError: () => {
+    console.log("Login Failed");
+  },
+});
   const navigate = useNavigate();
   const images = [bg1, bg2, bg3];
   const [currentImage, setCurrentImage] = useState(0);
@@ -29,9 +53,9 @@ function MainPage() {
 
   return (
     <div
-      className="min-h-screen bg-[#1a1625] flex items-center justify-center p-4 md:p-10"
+      className="min-h-screen bg-[#1a1625] flex items-start md:items-center justify-center p-4 py-6 md:p-10"
     >
-      <div className="w-full max-w-[1100px] min-h-[650px] bg-[#1f1b2e] rounded-3xl flex overflow-hidden shadow-2xl">
+      <div className="w-full max-w-[1100px] min-h-[650px] bg-[#1f1b2e] rounded-3xl flex shadow-2xl">
 
         {/* LEFT SIDE: Image Slider */}
         <div className="w-1/2 relative hidden md:block">
@@ -88,7 +112,7 @@ function MainPage() {
         </div>
 
         {/* RIGHT SIDE: Auth Form */}
-        <div className="w-full md:w-1/2 px-8 lg:px-16 py-10 text-white flex flex-col justify-center">
+        <div className="w-full md:w-1/2 px-5 md:px-8 lg:px-16 py-8 pb-10 text-white flex flex-col justify-center">
           <div className="max-w-md mx-auto w-full">
             <h2 className="text-4xl font-bold mb-3 tracking-tight">
               Create an account
@@ -154,9 +178,12 @@ function MainPage() {
               </div>
 
               <div className="flex gap-4">
-                <button className="flex-1 h-12 border border-gray-800 rounded-xl flex items-center justify-center gap-3 hover:bg-white/5 transition-colors">
-                  <FcGoogle size={22} />
-                  <span className="text-sm font-medium">Google</span>
+                <button
+                  onClick={() => login()}
+                  className="flex-1 h-12 border border-gray-800 rounded-xl flex items-center justify-center gap-3 hover:bg-white/5 transition-colors"
+                  >
+                    <FcGoogle size={22} />
+                    <span className="text-sm font-medium">Google</span>
                 </button>
                 <button className="flex-1 h-12 border border-gray-800 rounded-xl flex items-center justify-center gap-3 hover:bg-white/5 transition-colors">
                   <FaApple size={22} />
