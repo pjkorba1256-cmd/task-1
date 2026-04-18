@@ -4,9 +4,9 @@ import { FiMonitor, FiPercent, FiTruck, FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
 
 /* ---- Animated Mascot ---- */
+// Mobile: w-24 h-24 small corner mascot. Desktop md+: w-80 h-80 full size
 function Mascot() {
   return (
-    {/* Mobile: w-24 h-24 small corner mascot. Desktop md+: w-80 h-80 full size */}
     <div className="relative w-24 h-24 md:w-80 md:h-80 flex items-center justify-center select-none">
       {/* Back-left teal square */}
       <div
