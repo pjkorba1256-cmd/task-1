@@ -121,7 +121,7 @@ export default function LastPage() {
               <rect x="9" y="9" width="6" height="6" rx="1.5" fill="white" opacity="0.3" />
             </svg>
           </div>
-          <span className="text-white font-bold text-lg tracking-tight">FintiSell</span>
+          <span className="text-white font-bold text-lg tracking-tight">Picksell</span>
         </div>
 
         {/* Desktop Nav */}
