@@ -6,37 +6,37 @@ import { useState } from "react";
 /* ---- Animated Mascot ---- */
 function Mascot() {
   return (
-    <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center select-none">
+    <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 flex items-center justify-center select-none">
       {/* Back-left teal square */}
       <div
-        className="absolute w-40 h-40 md:w-52 md:h-52 rounded-3xl"
+        className="absolute w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-3xl"
         style={{
           background: "linear-gradient(135deg, #2ECBBB 0%, #1AA99A 100%)",
-          transform: "rotate(-20deg) translate(-30px, 20px)",
+          transform: "rotate(-20deg) translate(-22px, 16px)",
           zIndex: 1,
         }}
       />
       {/* Back-right coral square */}
       <div
-        className="absolute w-28 h-28 md:w-36 md:h-36 rounded-3xl"
+        className="absolute w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-3xl"
         style={{
           background: "linear-gradient(135deg, #F2705A 0%, #E85840 100%)",
-          transform: "rotate(22deg) translate(55px, 45px)",
+          transform: "rotate(22deg) translate(40px, 34px)",
           zIndex: 1,
         }}
       />
       {/* Front yellow square (face) — static, no motion */}
       <div
-        className="relative w-44 h-44 md:w-56 md:h-56 rounded-[2.5rem] shadow-2xl z-10 flex flex-col items-center justify-center"
+        className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl z-10 flex flex-col items-center justify-center"
         style={{
           background: "linear-gradient(145deg, #FFE066 0%, #FFD020 100%)",
           boxShadow: "0 20px 60px rgba(255, 208, 32, 0.3)",
         }}
       >
         {/* Eyes — static */}
-        <div className="flex gap-6 mb-4">
-          <div className="w-3 h-5 bg-[#1a1a3e] rounded-full" />
-          <div className="w-3 h-5 bg-[#1a1a3e] rounded-full" />
+        <div className="flex gap-4 md:gap-6 mb-3 md:mb-4">
+          <div className="w-2.5 h-4 md:w-3 md:h-5 bg-[#1a1a3e] rounded-full" />
+          <div className="w-2.5 h-4 md:w-3 md:h-5 bg-[#1a1a3e] rounded-full" />
         </div>
       </div>
     </div>
@@ -206,15 +206,15 @@ export default function LastPage() {
       )}
 
       {/* ---- HERO ---- */}
-      <section className="relative overflow-hidden px-6 md:px-16 pt-10 pb-28 md:pb-40">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <section className="relative overflow-hidden px-6 md:px-16 pt-10 pb-16 md:pb-40">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Left: Text */}
           <div className="flex-1 z-10">
             <motion.h1
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-4xl md:text-6xl font-extrabold leading-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-4 md:mb-6"
             >
               The hassle-free platform
               <br />
@@ -264,7 +264,7 @@ export default function LastPage() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, type: "spring", damping: 14 }}
-            className="flex-shrink-0 z-10"
+            className="flex-shrink-0 z-10 flex justify-center w-full md:w-auto"
           >
             <Mascot />
           </motion.div>
