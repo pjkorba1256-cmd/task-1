@@ -167,7 +167,7 @@ export default function LastPage() {
           </div>
         </div>
 
-        {/* Mobile: CTA buttons + Hamburger */}
+        {/* Mobile: Get Started + Hamburger only */}
         <div className="md:hidden flex items-center gap-2">
           <motion.button
             whileTap={{ scale: 0.95 }}
@@ -176,13 +176,6 @@ export default function LastPage() {
             style={{ background: "linear-gradient(135deg, #FFE066, #FFD020)", color: "#1E1B4B" }}
           >
             Get Started
-          </motion.button>
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            className="px-3 py-1.5 rounded-xl text-xs font-medium text-white"
-            style={{ border: "1px solid rgba(255,255,255,0.3)" }}
-          >
-            Book demo
           </motion.button>
           <button
             id="last-mobile-menu"
@@ -249,19 +242,20 @@ export default function LastPage() {
               Connect your bank account and start selling to the world today!
             </motion.p>
 
-            {/* Hero CTA buttons — hidden on mobile (shown in navbar instead), visible on desktop */}
+            {/* Hero CTA buttons — Get Started hidden on mobile (in navbar), Book demo visible on all */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="hidden md:flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4"
             >
+              {/* Get Started — hidden on mobile (shown in navbar), visible on desktop */}
               <motion.button
                 whileHover={{ scale: 1.04, boxShadow: "0 12px 40px rgba(255,208,32,0.45)" }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate("/")}
                 id="last-hero-cta"
-                className="px-8 py-4 rounded-2xl font-bold text-sm"
+                className="hidden md:block px-8 py-4 rounded-2xl font-bold text-sm"
                 style={{ background: "linear-gradient(135deg, #FFE066, #FFD020)", color: "#1E1B4B" }}
               >
                 Get Started
