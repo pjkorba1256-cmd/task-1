@@ -167,15 +167,32 @@ export default function LastPage() {
           </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          id="last-mobile-menu"
-          className="md:hidden p-2 rounded-lg text-white"
-          style={{ background: "rgba(255,255,255,0.1)" }}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
-        </button>
+        {/* Mobile: CTA buttons + Hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/")}
+            className="px-3 py-1.5 rounded-xl text-xs font-bold"
+            style={{ background: "linear-gradient(135deg, #FFE066, #FFD020)", color: "#1E1B4B" }}
+          >
+            Get Started
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            className="px-3 py-1.5 rounded-xl text-xs font-medium text-white"
+            style={{ border: "1px solid rgba(255,255,255,0.3)" }}
+          >
+            Book demo
+          </motion.button>
+          <button
+            id="last-mobile-menu"
+            className="p-2 rounded-lg text-white ml-1"
+            style={{ background: "rgba(255,255,255,0.1)" }}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
+          </button>
+        </div>
       </header>
 
       {/* Mobile Dropdown */}
@@ -232,11 +249,12 @@ export default function LastPage() {
               Connect your bank account and start selling to the world today!
             </motion.p>
 
+            {/* Hero CTA buttons — hidden on mobile (shown in navbar instead), visible on desktop */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-4"
+              className="hidden md:flex flex-wrap gap-4"
             >
               <motion.button
                 whileHover={{ scale: 1.04, boxShadow: "0 12px 40px rgba(255,208,32,0.45)" }}
