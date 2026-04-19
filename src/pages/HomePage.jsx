@@ -146,6 +146,7 @@ export default function HomePage() {
         <div className="hidden md:flex items-center gap-3">
           <button
             id="last-sign-in"
+            onClick={() => navigate("/landing")}
             className="px-5 py-2 rounded-xl text-sm font-medium text-white hover:bg-white/10 transition-colors"
             style={{ border: "1px solid rgba(255,255,255,0.25)" }}
           >
@@ -153,7 +154,7 @@ export default function HomePage() {
           </button>
           <button
             id="last-get-started"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/landing")}
             className="px-5 py-2 rounded-xl text-sm font-medium text-white hover:bg-white/10 transition-colors"
             style={{ border: "1px solid rgba(255,255,255,0.4)" }}
           >
@@ -171,7 +172,7 @@ export default function HomePage() {
         <div className="md:hidden flex items-center gap-2">
           <motion.button
             whileTap={{ scale: 0.95 }}
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/landing")}
             className="px-3 py-1.5 rounded-xl text-xs font-bold"
             style={{ background: "linear-gradient(135deg, #FFE066, #FFD020)", color: "#1E1B4B" }}
           >
@@ -202,11 +203,11 @@ export default function HomePage() {
             </a>
           ))}
           <div className="flex gap-3 pt-2">
-            <button className="flex-1 py-2.5 rounded-xl text-sm font-medium text-white" style={{ border: "1px solid rgba(255,255,255,0.25)" }}>
+            <button onClick={() => navigate("/landing")} className="flex-1 py-2.5 rounded-xl text-sm font-medium text-white" style={{ border: "1px solid rgba(255,255,255,0.25)" }}>
               Sign in
             </button>
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/landing")}
               className="flex-1 py-2.5 rounded-xl text-sm font-medium text-white"
               style={{ border: "1px solid rgba(255,255,255,0.4)" }}
             >
@@ -253,7 +254,7 @@ export default function HomePage() {
               <motion.button
                 whileHover={{ scale: 1.04, boxShadow: "0 12px 40px rgba(255,208,32,0.45)" }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/landing")}
                 id="last-hero-cta"
                 className="hidden md:block px-8 py-4 rounded-2xl font-bold text-sm"
                 style={{ background: "linear-gradient(135deg, #FFE066, #FFD020)", color: "#1E1B4B" }}
