@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   FiGrid, FiRepeat, FiUsers, FiBox, FiBookOpen, 
@@ -9,7 +8,6 @@ import {
 } from "react-icons/fi";
 
 function Dashboard() {
-  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -77,7 +75,7 @@ function Dashboard() {
             <h4 className="font-bold text-white mb-2">Help Center</h4>
             <p className="text-[10px] text-white/80 mb-6 leading-relaxed">Having trouble in Finti, Please contact us for more questions.</p>
             <button 
-              onClick={() => navigate("/")}
+
               className="w-full bg-white text-orange-500 py-3 rounded-2xl text-[11px] font-bold hover:bg-gray-50 transition-colors"
             >
               Go To Help Center
