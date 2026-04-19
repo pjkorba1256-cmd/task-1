@@ -8,7 +8,7 @@ import {
   FiArrowUpRight, FiArrowDownLeft, FiZap, FiMenu, FiX
 } from "react-icons/fi";
 
-function LandingPage() {
+function Dashboard() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -362,4 +362,4 @@ function FiArrowRight() {
    return <FiArrowUpRight className="text-gray-400" />
 }
 
-export default LandingPage;
+export default Dashboard;

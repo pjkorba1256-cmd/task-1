@@ -95,7 +95,7 @@ function FeatureCard({ icon, title, subtitle, delay }) {
 }
 
 /* ---- Main Component ---- */
-export default function LastPage() {
+export default function HomePage() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 

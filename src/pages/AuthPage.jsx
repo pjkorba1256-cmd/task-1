@@ -10,7 +10,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from "@react-oauth/google";
 
 
-function MainPage() {
+function AuthPage() {
   const login = useGoogleLogin({
   onSuccess: async (tokenResponse) => {
     console.log("Token:", tokenResponse);
@@ -198,4 +198,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default AuthPage;
