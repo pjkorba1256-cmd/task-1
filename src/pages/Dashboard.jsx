@@ -106,7 +106,7 @@ function Dashboard() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-0">
             {/* Desktop Only Search & Icons logic */}
             <div className="hidden md:block w-auto">
-               <h1 className="text-xl font-bold opacity-80">Dashboard Overview</h1>
+               <h1 className="text-xl font-bold opacity-80">Dashboard Overwiew</h1>
             </div>
 
             {/* Search Bar */}
@@ -171,7 +171,7 @@ function Dashboard() {
             </div>
 
             {/* SAVING STATUS CARD */}
-            <div className="bg-white rounded-3xl p-6 h-56 shadow-xl shadow-gray-200/50 flex flex-col justify-between relative">
+            <div className="bg-orange rounded-3xl p-6 h-56 shadow-xl shadow-gray-200/50 flex flex-col justify-between relative">
               <div className="flex justify-between items-start">
                 <h4 className="text-base font-extrabold text-[#1A202C]">Saving Status</h4>
                 <div className="text-gray-400 cursor-pointer text-xs">?</div>
