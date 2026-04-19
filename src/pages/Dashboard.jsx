@@ -234,13 +234,13 @@ function Dashboard() {
               <div className="space-y-8">
                 <div>
                   <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-6">Mon, Mar 1</p>
-                  <TransactionItem icon={<FiArrowRight />} label="Payment Sent to Shakir" amount="$560.00" />
-                  <TransactionItem icon={<FiArrowLeft />} label="Salary from Redwhale" amount="$12,200.00" positive />
-                  <TransactionItem icon={<FiZap />} label="Money Sent to Wise.com" amount="$3,000.00" />
+                  <TransactionItem icon={<FiArrowRight />} label="Payment Sent to Shakir" amount="Rs.560.00" />
+                  <TransactionItem icon={<FiArrowLeft />} label="Salary from Redwhale" amount="Rs.12,200.00" positive />
+                  <TransactionItem icon={<FiZap />} label="Money Sent to Wise.com" amount="Rs.3,000.00" />
                 </div>
                 <div>
                   <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-6 border-t border-gray-100 pt-8">Mon, Mar 1</p>
-                  <TransactionItem icon={<FiArrowRight />} label="Purchased Macbook Pro" amount="$5560.00" />
+                  <TransactionItem icon={<FiArrowRight />} label="Purchased Macbook Pro" amount="Rs.5560.00" />
                 </div>
               </div>
             </div>
@@ -255,14 +255,14 @@ function Dashboard() {
               <div className="space-y-6">
                  <div>
                    <p className="text-[9px] font-bold text-gray-400 mb-4 tracking-widest uppercase">Today</p>
-                   <UpcomingItem icon={<FiZap />} title="Water Bill" status="Unsuccessfully" amount="-$280" color="#5D26C1" />
+                   <UpcomingItem icon={<FiZap />} title="Water Bill" status="Unsuccessfully" amount="Rs.-280" color="#5D26C1" />
                  </div>
                  <div>
                    <p className="text-[9px] font-bold text-gray-400 mb-4 tracking-widest uppercase">Tomorrow</p>
                    <div className="space-y-6">
-                      <UpcomingItem icon={<FiBriefcase />} title="Salary Oct" status="Successfully" amount="+$1200" color="#FF8A65" positive />
-                      <UpcomingItem icon={<FiZap />} title="Electric Bill" status="Successfully" amount="-$480" color="#00D7E4" />
-                      <UpcomingItem icon={<FiFileText />} title="Jane transfers" status="Successfully" amount="+$500" color="#FFD882" positive />
+                      <UpcomingItem icon={<FiBriefcase />} title="Salary Oct" status="Successfully" amount="Rs.+1200" color="#FF8A65" positive />
+                      <UpcomingItem icon={<FiZap />} title="Electric Bill" status="Successfully" amount="Rs.-480" color="#00D7E4" />
+                      <UpcomingItem icon={<FiFileText />} title="Jane transfers" status="Successfully" amount="Rs.+500" color="#FFD882" positive />
                    </div>
                  </div>
               </div>
