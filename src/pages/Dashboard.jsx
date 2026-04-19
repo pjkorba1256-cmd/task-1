@@ -98,8 +98,8 @@ function Dashboard() {
                 <FiMenu size={20} />
               </button>
               <div className="flex items-center gap-3">
-                  <span className="text-sm">Hi, <span className="font-bold">Shakir</span></span>
-                  <img src="https://ui-avatars.com/api/?name=Shakir&background=FF8A65&color=fff" alt="avatar" className="w-8 h-8 rounded-lg" />
+                  <span className="text-sm">Hi, <span className="font-bold">Prince</span></span>
+                  <img src="https://ui-avatars.com/api/?name=Prince&background=FF8A65&color=fff" alt="avatar" className="w-8 h-8 rounded-lg" />
               </div>
           </div>
 
@@ -130,8 +130,8 @@ function Dashboard() {
                 <a href="#" className="hover:opacity-80">Wallet</a>
                 <a href="#" className="hover:opacity-80">Invoices</a>
                 <div className="flex items-center gap-3">
-                  <span>Hi, <span className="font-bold">Shakir</span></span>
-                  <img src="https://ui-avatars.com/api/?name=Shakir&background=FF8A65&color=fff" alt="avatar" className="w-10 h-10 rounded-xl" />
+                  <span>Hi, <span className="font-bold">Prince</span></span>
+                  <img src="https://ui-avatars.com/api/?name=Prince&background=FF8A65&color=fff" alt="avatar" className="w-10 h-10 rounded-xl" />
                 </div>
               </div>
             </div>
@@ -156,15 +156,15 @@ function Dashboard() {
 
               <div>
                 <p className="text-[9px] text-black/50 font-bold uppercase tracking-widest mb-1">Card Number</p>
-                <h3 className="text-xl font-bold tracking-widest mb-6">3829 4820 4629 5025</h3>
+                <h3 className="text-xl font-bold tracking-widest mb-6">**** **** **** 4567</h3>
                 <div className="flex justify-between items-end">
                   <div>
                     <p className="text-[8px] text-black/50 font-bold uppercase mb-1">Card Holder</p>
-                    <p className="font-bold text-xs">Anita Rose</p>
+                    <p className="font-bold text-xs">Prince Jain</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-[8px] text-black/50 font-bold uppercase mb-1">Valid Thru</p>
-                    <p className="font-bold text-xs">09/17</p>
+                    <p className="text-[8px] text-black/50 font-bold uppercase mb-1">Valid Till</p>
+                    <p className="font-bold text-xs">12/29</p>
                   </div>
                 </div>
               </div>
@@ -200,11 +200,11 @@ function Dashboard() {
                 <p className="text-[9px] font-bold uppercase underline cursor-pointer opacity-80">Saving Account</p>
               </div>
               <div className="mt-4">
-                <h2 className="text-3xl font-extrabold leading-tight">PKR 9,250,000</h2>
+                <h2 className="text-3xl font-extrabold leading-tight">INR 2,250,000</h2>
               </div>
               <div className="flex justify-between items-center">
                  <div className="bg-white/20 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-2">
-                    PKR <FiArrowDownLeft />
+                    INR <FiArrowDownLeft />
                  </div>
               </div>
             </div>
