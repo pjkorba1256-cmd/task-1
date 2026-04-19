@@ -171,7 +171,7 @@ function Dashboard() {
             </div>
 
             {/* SAVING STATUS CARD */}
-            <div className="bg-orange rounded-3xl p-6 h-56 shadow-xl shadow-gray-200/50 flex flex-col justify-between relative">
+            <div className="bg-white rounded-3xl p-6 h-56 shadow-xl shadow-gray-200/50 flex flex-col justify-between relative">
               <div className="flex justify-between items-start">
                 <h4 className="text-base font-extrabold text-[#1A202C]">Saving Status</h4>
                 <div className="text-gray-400 cursor-pointer text-xs">?</div>
