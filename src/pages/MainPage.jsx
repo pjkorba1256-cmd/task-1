@@ -48,7 +48,7 @@ function MainPage() {
 
   const handleCreateAccount = () => {
     // Navigate to landing page
-    navigate("/landing");
+    navigate("/main");
   };
 
   return (
