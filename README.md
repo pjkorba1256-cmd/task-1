@@ -79,8 +79,9 @@ The app will run on:
 
 ## 📸 Screenshots
 
-(Add your screenshots here)
-
+<img width="1900" height="912" alt="image" src="https://github.com/user-attachments/assets/c571af10-2f0a-4238-b2fe-22d98fe3f806" />
+<img width="1899" height="904" alt="image" src="https://github.com/user-attachments/assets/05c80229-18b1-4b13-b6c4-af1888d6683c" />
+<img width="1906" height="910" alt="image" src="https://github.com/user-attachments/assets/7ecb5a15-3e91-40ff-8472-b9b6e0aff1ca" />
 ---
 
 ## 🚀 Deployment
